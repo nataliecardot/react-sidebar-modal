@@ -7,4 +7,10 @@ const AppProvider = ({ children }) => {
   return <AppContext.Provider value="hello">{children}</AppContext.Provider>;
 };
 
+// custom hook
+// if you want to use React Hooks, it needs to be in a component or a custom hook - so use at beginning is required; otherwise it's just a regular fn
+export const useGlobalContext = () => {
+  return useContext(AppContext);
+};
+
 export { AppContext, AppProvider };
